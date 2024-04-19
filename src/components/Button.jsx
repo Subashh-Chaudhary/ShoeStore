@@ -7,9 +7,9 @@ const Button = ({label, iconURL}) => {
       <p
       className='font-montserrat text-lg leading-none text-white border-coral-red font-bold'>{label}</p>
           
-          <img src={iconURL} 
+          {iconURL && <img src={iconURL} 
           alt="arrowRightIcon"
-          className='ml-2 rounded-full w-5 h-5' />
+          className='ml-2 rounded-full w-5 h-5' />}
     </button>
   )
 }
