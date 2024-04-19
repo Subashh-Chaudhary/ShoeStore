@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Button = ({label, iconURL}) => {
+const Button = ({label, iconURL, spOffer}) => {
   return (
     <button
-    className='flex justify-center items-center gap-2 px-7 py-4 border bg-coral-red rounded-md'>
+    className={`flex justify-center items-center gap-2 px-7 py-4 border rounded-md
+    ${spOffer ? 'bg-white border-slate-gray text-slate-gray' : ' text-white bg-coral-red '}
+    `}>
       <p
-      className='font-montserrat text-lg leading-none text-white border-coral-red font-bold'>{label}</p>
+      className='font-montserrat text-lg leading-none border-coral-red font-bold'>{label}</p>
           
           {iconURL && <img src={iconURL} 
           alt="arrowRightIcon"
