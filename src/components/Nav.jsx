@@ -27,15 +27,15 @@ const Nav = () => {
           <div
         className="flex  justify-center items-center gap-1 max-sm:gap-0">
           <a href="#"
-          className="font-montserrat font-semibold leading-normal text-lg text-gray-750 bg-transparent py-1 px-4 rounded-md hover:bg-slate-500  hover:text-white hover:rounded-md max-sm:text-[10px] max-sm:px-2">
+          className="font-montserrat font-semibold leading-normal text-lg text-gray-750 bg-transparent py-1 px-4 rounded-md hover:bg-slate-500  hover:text-white max-sm:text-[10px] max-sm:px-2">
             Login
           </a>
           <p
           >
-            |
+            /
           </p>
           <a href="#"
-          className="font-montserrat font-semibold leading-normal text-lg text-gray-750 bg-transparent py-1 px-4 rounded-md hover:bg-slate-500 hover:text-white hover:rounded-md max-sm:text-[10px] max-sm:px-2">
+          className="font-montserrat font-semibold leading-normal text-lg text-gray-750 bg-transparent py-1 px-4 rounded-md hover:bg-slate-500 hover:text-white max-sm:text-[10px] max-sm:px-2">
             Sign up
           </a>
         </div>
