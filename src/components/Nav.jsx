@@ -19,13 +19,11 @@ const Nav = () => {
     };
   }, []);
 
-  const location = useLocation();
-  console.log(location);
-
   return (
     <header
       id="home"
-      className={`padding-x py-5 z-20 w-full fixed ${
+      className={`padding-x py-5 z-20 w-full fixed
+       ${
         scrolled ? "bg-slate-100 border-b-2 border-b-orange-100" : ""
       }`}
     >
@@ -55,18 +53,18 @@ const Nav = () => {
           <div className="flex  justify-center items-center gap-1 max-sm:gap-0">
             <NavLink
               to="/login"
-              className="font-montserrat font-semibold leading-normal text-lg text-gray-750 bg-transparent py-1 px-4 rounded-md hover:bg-slate-500  hover:text-white max-sm:text-[10px] max-sm:px-2"
+              className="btn"
             >
               Login
             </NavLink>
 
             <p>/</p>
-            <a
-              href="#"
-              className="font-montserrat font-semibold leading-normal text-lg text-gray-750 bg-transparent py-1 px-4 rounded-md hover:bg-slate-500 hover:text-white max-sm:text-[10px] max-sm:px-2"
+            <NavLink
+              to="/login"
+              className="btn"
             >
               Sign up
-            </a>
+            </NavLink>
           </div>
           <div className="hidden max-lg:block">
             <img

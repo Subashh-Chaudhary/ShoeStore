@@ -6,6 +6,9 @@ import Layout from './Layout.jsx';
 import Login from './components/Login.jsx';
 import Hero from './sections/Hero.jsx';
 import Home from './sections/Home.jsx';
+import AllProducts from './sections/AllProducts.jsx';
+import MyCart from './sections/MyCart.jsx';
+import ContactUs from './sections/ContactUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,18 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
+        path: "products",
+        element: <AllProducts />
+      },
+      {
+        path: "cart",
+        element: <MyCart />
+      },
+      {
+        path: 'contact-us',
+        element: <ContactUs />
+      },
+      {
         path: "login",
         element: <Login />
       },
@@ -25,7 +40,7 @@ const router = createBrowserRouter([
         element: <Login register/>
       },
       {
-        path : "hero",
+        path: "hero",
         element: <Hero />
       }
     ]
