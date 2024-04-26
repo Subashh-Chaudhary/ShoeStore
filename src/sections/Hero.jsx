@@ -48,7 +48,7 @@ const Hero = () => {
 
         <div
         className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[17%] max-sm:px-6'>
-          {shoes.map((shoe, index) =>(
+          {shoes.map((shoe) =>(
             <div key={shoe.thumbnail}> 
               <ShoeCard 
               imgURL = {shoe}
