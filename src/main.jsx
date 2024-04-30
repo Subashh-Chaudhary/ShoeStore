@@ -1,52 +1,58 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import {RouterProvider, createBrowserRouter} from 'react-router-dom';
-import Layout from './Layout.jsx';
-import Login from './components/Login.jsx';
-import Hero from './sections/Hero.jsx';
-import Home from './sections/Home.jsx';
-import AllProducts from './sections/AllProducts.jsx';
-import MyCart from './sections/MyCart.jsx';
-import ContactUs from './sections/ContactUs.jsx';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Layout from "./Layout.jsx";
+import Login from "./components/Login.jsx";
+import Hero from "./sections/Hero.jsx";
+import Home from "./sections/Home.jsx";
+import AllProducts from "./sections/AllProducts.jsx";
+import MyCart from "./sections/MyCart.jsx";
+import ContactUs from "./sections/ContactUs.jsx";
+import ProductDetails from "./components/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children : [
+    children: [
       {
         path: "",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "products",
-        element: <AllProducts />
+        element: <AllProducts />,
+        children: [
+          {
+            path: "productdetails",
+            element: <ProductDetails />,
+          },
+        ],
       },
       {
         path: "cart",
-        element: <MyCart />
+        element: <MyCart />,
       },
       {
-        path: 'contact-us',
-        element: <ContactUs />
+        path: "contact-us",
+        element: <ContactUs />,
       },
       {
         path: "login",
-        element: <Login />
+        element: <Login />,
       },
       {
         path: "register",
-        element: <Login register/>
+        element: <Login register />,
       },
       {
         path: "hero",
-        element: <Hero />
-      }
-    ]
-
-  }
-])
+        element: <Hero />,
+      },
+    ],
+  },
+]);
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -55,17 +61,17 @@ const router = createBrowserRouter([
 //       <Route path ="about" element={<About/>}/>
 //       <Route path ="contact" element={<Contact/>}/>
 //       <Route path ="user/:userid" element={<User/>}/>
-//       <Route 
+//       <Route
 //       loader={githubInfoLoader}
-//       path ="github" 
+//       path ="github"
 //       element={<Github/>}
 //       />
 //     </Route>
 //   )
 // )
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

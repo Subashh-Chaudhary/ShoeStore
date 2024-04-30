@@ -22,7 +22,7 @@ const Nav = () => {
   return (
     <header
       id="home"
-      className={`padding-x py-5 z-20 w-full fixed
+      className={`padding-x py-3 z-20 w-full fixed
        ${
         scrolled ? "bg-slate-100 border-b-2 border-b-orange-100" : ""
       }`}
