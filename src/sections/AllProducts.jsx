@@ -1,5 +1,5 @@
 import React from 'react'
-import { products } from '../constants'
+import { allproducts } from '../constants'
 import PopularProductCard from '../components/PopularProductCard'
 
 const AllProducts = () => {
@@ -19,8 +19,9 @@ const AllProducts = () => {
       </div>
       <div 
       className='mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14'>
-        {products.map(product =>(
+        {allproducts.map(product =>(
           <PopularProductCard 
+          id = {product.id}
           key = {product.name} 
           imgURL={product.imgURL}
           name = {product.name}

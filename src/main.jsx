@@ -9,7 +9,7 @@ import Home from "./sections/Home.jsx";
 import AllProducts from "./sections/AllProducts.jsx";
 import MyCart from "./sections/MyCart.jsx";
 import ContactUs from "./sections/ContactUs.jsx";
-import ProductDetails from "./components/ProductDetails.jsx";
+import ProductDetails from "./sections/ProductDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
         element: <AllProducts />,
         children: [
           {
-            path: "productdetails",
-            element: <ProductDetails />,
+            path: "id",
+            element: <ProductDetails/>,
           },
         ],
       },

@@ -12,11 +12,6 @@ const Layout = () => {
     setsignInData((prevdata) => [{...username, ...password}, ...prevdata]);
   };
   
-  console.log(signInData)
-
-
-  
-
   return (
     <FormDataProvider value = {{signInData, signUpData, addLogin}}>
       <main className="relative">

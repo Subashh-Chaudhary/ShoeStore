@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductDetails = () => {
+const ProductDetailsCard = () => {
           console.log("rendered!!")
   return (
     <div className="max-w-4xl mx-auto mt-8 bg-white rounded-md shadow-md overflow-hidden">
@@ -41,4 +41,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ProductDetailsCard;

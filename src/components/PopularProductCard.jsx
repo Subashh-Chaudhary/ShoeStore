@@ -4,7 +4,7 @@ import purchase from "../assets/icons/purchase.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
-const PopularProductCard = ({ imgURL, name, price }) => {
+const PopularProductCard = ({ imgURL, name, price, id}) => {
   return (
     <div className="flex flex-1 flex-col w-full max-sm:w-full">
       <img
@@ -25,7 +25,7 @@ const PopularProductCard = ({ imgURL, name, price }) => {
         </p>
         <div>
           <Link
-           to="productdetails">
+           to={`${id}`}>
             <Button label="Purchase Now" iconURL={purchase} />
           </Link>
         </div>
